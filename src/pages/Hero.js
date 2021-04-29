@@ -62,7 +62,7 @@ const {updateFeatured, heroes} = useContext(GlobalContext);
                   <div className='th-card-header d-flex justify-content-between'>
                     <span>
                       <a
-                        onClick={() => updateFeatured(hero.id)}
+                        // onClick={() => updateFeatured(hero.id)}
                         href='javascript:void(0)'>
                         {hero.featured ? (
                           <FaStar style={{ color: 'gold' }} />
