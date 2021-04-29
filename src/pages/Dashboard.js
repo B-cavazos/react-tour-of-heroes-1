@@ -1,16 +1,21 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { GlobalContext } from '../context/GlobalContext';
 import HeroCard from '../components/HeroCard';
 import '../App.css';
 
+
 const DashboardPage = () => {
+
+  const {heroes} = useContext(GlobalContext);
+
   const [featuredHeroes, setFeaturedHeroes] = useState([]);
 
   /* TODO: Uncomment useEffect after heroes data set is hooked in */
-  // useEffect(() => {
-  //   let featured = heroes.filter(hero => hero.featured);
+  useEffect(() => {
+    let featured = heroes.filter(hero => hero.featured);
 
-  //   setFeaturedHeroes(featured);
-  // }, [heroes]);
+    setFeaturedHeroes(featured);
+  }, [heroes]);
 
   if (featuredHeroes.length === 0) {
     return (
