@@ -5,7 +5,6 @@ import '../App.css';
 
 
 const DashboardPage = () => {
-
   const {heroes} = useContext(GlobalContext);
 
   const [featuredHeroes, setFeaturedHeroes] = useState([]);
