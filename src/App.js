@@ -1,14 +1,14 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import {GlobalContext} from './context/GlobalContext'
+import {GlobalProvider} from './context/GlobalContext'
 import AppRouter from './routers/AppRouter';
 
 const App = () => {
   return (
-    <GlobalContext.Provider>
+    <GlobalProvider>
       <Router>
         <AppRouter />
       </Router>
-    </GlobalContext.Provider>
+    </GlobalProvider>
   );
 };
 
