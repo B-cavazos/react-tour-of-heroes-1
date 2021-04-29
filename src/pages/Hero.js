@@ -27,11 +27,11 @@ const {updateFeatured, heroes} = useContext(GlobalContext);
   });
 
   /* TODO: Uncomment useEffect after heroes data set is hooked in */
-  useEffect(() => {
-    let foundHero = heroes.find(h => h.id === +heroId);
-    // console.log(foundHero);
-    setHero(foundHero);
-  }, [hero, heroId, heroes]);
+  // useEffect(() => {
+  //   let foundHero = heroes.find(h => h.id === +heroId);
+  //   // console.log(foundHero);
+  //   setHero(foundHero);
+  // }, [hero, heroId, heroes]);
 
   if (!hero.id) {
     return (
