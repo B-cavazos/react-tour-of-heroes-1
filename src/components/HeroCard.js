@@ -1,8 +1,12 @@
+import {useContext} from 'react';
+import {GlobalContext} from '../context/GlobalContext'
 import { Link } from 'react-router-dom';
 import { GiBatMask } from 'react-icons/gi';
-import { FaStar, FaRegStar } from 'react-icons/fa';
+import { FaStar, FaRegStar, FaRegMoon, FaRegMap } from 'react-icons/fa';
 
 const HeroCard = ({ hero }) => {
+  const {updateFeatured, heroes} = useContext(GlobalContext);
+
   return (
     <div className='card mb-3'>
       {/* header */}
@@ -39,7 +43,7 @@ const HeroCard = ({ hero }) => {
           </Link>
           <a
             href='javascript:void(0)'
-            // onClick={() => updateFeatured(hero.id)}
+            onClick={() => updateFeatured(hero.id)}
             className='card-link'>
             {hero.featured ? <FaStar /> : <FaRegStar />}
           </a>
